@@ -27,9 +27,7 @@ public class Dado {
 		if (ultimaCara == 0) {
 			lanzarDado();
 		}
-		else {
-			System.out.println("Dado de " + this.caras + " caras sacó " + this.ultimaCara);
-		}
+		
 	}
 	
 }

@@ -17,25 +17,30 @@ public class Ejercicio1 extends Dado {
         do {
             d1.lanzarDado();
             d2.lanzarDado();
-            System.out.println(j1.getNombre() + "ha sacado " + d1.getUltima());
-            System.out.println(j2.getNombre() + "ha sacado " + d2.getUltima());
+            System.out.println(j1.getNombre() + " ha sacado " + d1.getUltima());
+            System.out.println(j2.getNombre() + " ha sacado " + d2.getUltima());
             if (d1.ultimaCara > d2.ultimaCara) {
                 j1.Victoria();
                 j2.Derrota();
 
-                System.out.println(j1.getNombre() + "gana");
+                System.out.println(j1.getNombre() + " gana");
             } else if (d2.ultimaCara > d1.ultimaCara) {
                 j2.Victoria();
                 j1.Derrota();
 
-                System.out.println(j2.getNombre() + "gana");
+                System.out.println(j2.getNombre() + " gana");
             } else {
 
                 System.out.println("Hay empate");
             }
-
-        } while (true);
-
+            System.out.println(j1.getNombre() + " : " + j1.getFichas());
+            System.out.println(j2.getNombre() + " : " + j2.getFichas());
+        } while (j1.getFichas() > 0 || j2.getFichas() > 0);
+        if (j1.getFichas() == 0) {
+            System.out.println(j2.getNombre() + "ha ganado el juego");
+        } else {
+            System.out.println(j1.getNombre() + "ha ganado el juego");
+        }
     }
 
 }
