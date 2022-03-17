@@ -7,15 +7,20 @@ public class Selector {
         while (true) {
             System.out.println("1: Ejercicio 1");
             System.out.println("2: Ejercicio 2");
+            System.out.println("3: Finalizar programa");
             try {
                 eleccion = teclado.nextInt();
             } catch (InputMismatchException e) {
                 teclado.next();
             }
             switch (eleccion) {
-                case 1: Ejercicio1.Lanzar(teclado);
+                case 1:
+                    Ejercicio1.Lanzar(teclado);
                     break;
                 case 2:
+                    break;
+                case 3:
+                    System.exit(0);
                     break;
                 default:
                     break;
