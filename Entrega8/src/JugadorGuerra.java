@@ -7,19 +7,24 @@ public class JugadorGuerra {
         this.dado = dado;
         this.fichas = 10;
     }
-public int getFichas(){
-    return this.fichas;
-}
-public String getNombre(){
-    return this.nombre;
-}
+
+    public int getFichas() {
+        return this.fichas;
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public void Derrota(){
+
+    public void Derrota() {
         this.fichas--;
     }
-    public void Victoria(){
+
+    public void Victoria() {
         this.fichas++;
     }
 }

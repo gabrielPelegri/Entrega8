@@ -29,9 +29,12 @@ public class Ejercicio2 extends Gestor {
 
                     break;
                 case 4:
-                    gc.crearPedido();
+                    gc.crearPedido(teclado);
                     break;
                 case 5:
+
+                    break;
+                case 6:
                     System.exit(0);
                 default:
                     System.out.println("La opción elegida no existe.");

@@ -33,6 +33,17 @@ public class Gestor {
         }
     }
 
+    public void mostrarObras() {
+        if (listaObras.isEmpty()) {
+            System.out.println("No hay obras");
+        } else {
+
+        }
+        for (Cliente c : listaClientes) {
+            System.out.println(c.toString());
+        }
+    }
+
     public void crearObra(Scanner teclado) {
 
         int eleccion = 0;
@@ -43,7 +54,6 @@ public class Gestor {
             System.out.println("2: Video");
             try {
                 eleccion = teclado.nextInt();
-
 
             } catch (InputMismatchException e) {
                 teclado.next();
@@ -82,10 +92,47 @@ public class Gestor {
             }
         }
     }
-    public void crearPedido(){
-        System.out.println("¿Para qué cliente?");
-        mostrarClientes();
 
+    public void crearPedido(Scanner teclado) {
+        System.out.println("Cantidad: " + listaObras.size());
+        if (!listaClientes.isEmpty()) {
+
+            int eleccion = 0;
+            Pedido p;
+            while (true) {
+                System.out.println("¿Para qué cliente?");
+                mostrarClientes();
+                try {
+                    eleccion = teclado.nextInt();
+                    eleccion--;
+                    p = new Pedido(listaClientes.get(eleccion));
+                    break;
+
+                } catch (InputMismatchException e) {
+                    teclado.next();
+                } catch (IndexOutOfBoundsException e) {
+                    System.out.println("No válido");
+                }
+            }
+            int salir=listaObras.size();
+            eleccion=salir++;
+            while (eleccion !=salir+1) {
+                System.out.println("¿Qué obra agregar al pedido?");
+                for (Obra o : listaObras) {
+                    System.out.println(o.toString());
+                }
+                System.out.println(salir + "Finalizar");
+                try {
+                    eleccion = teclado.nextInt();
+                    eleccion--;
+                    p.setObras(listaObras.get(eleccion));
+                } catch (InputMismatchException e) {
+                    teclado.next();
+                } catch (IndexOutOfBoundsException e) {
+                    System.out.println("No válido");
+                }
+            }
+        }
     }
 
 }
