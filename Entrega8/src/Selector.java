@@ -17,7 +17,7 @@ public class Selector {
                 case 1:
                     Ejercicio1.Lanzar(teclado);
                     break;
-                case 2:
+                case 2:Ejercicio2.Lanzar(teclado);
                     break;
                 case 3:
                     System.exit(0);

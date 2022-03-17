@@ -44,10 +44,11 @@ public class Gestor {
             try {
                 eleccion = teclado.nextInt();
 
+
             } catch (InputMismatchException e) {
                 teclado.next();
             }
-        } while (eleccion != 1 || eleccion != 2);
+        } while (eleccion != 1 && eleccion != 2);
         System.out.println("Salida del bucle");
         System.out.println("¿Nombre de la obra?");
         String nombre = teclado.next();
@@ -80,6 +81,11 @@ public class Gestor {
                 listaObras.add(o);
             }
         }
+    }
+    public void crearPedido(){
+        System.out.println("¿Para qué cliente?");
+        mostrarClientes();
+
     }
 
 }

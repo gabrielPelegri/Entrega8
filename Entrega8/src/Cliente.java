@@ -1,17 +1,16 @@
-import Obras.Obra;
 
 public class Cliente {
-
-    public static int contador = 1;
+   private static int contador = 0;
     String nombre;
     int id = 0;
 
     public Cliente() {
-        this.id = contador;
         contador++;
+        this.id=contador;
     }
 
     public Cliente(String n) {
+        contador++;
         this.nombre = n;
         this.id = contador;
     }

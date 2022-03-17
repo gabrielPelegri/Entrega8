@@ -1,15 +1,22 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio2 extends Gestor {
 
-    public void cymClientes(Scanner teclado) {
+    public static void Lanzar(Scanner teclado) {
         Gestor gc = new Gestor();
         Scanner teclado2 = new Scanner(System.in);
-        int opcion;
-        do {
+        int opcion = 0;
+        while (true) {
+
             System.out.println("\n-- Menú --\n");
             menu();
-            opcion = teclado2.nextInt();
+            try {
+                opcion = teclado2.nextInt();
+
+            } catch (InputMismatchException e) {
+                teclado.next();
+            }
             switch (opcion) {
                 case 1:
                     gc.mostrarClientes();
@@ -18,12 +25,18 @@ public class Ejercicio2 extends Gestor {
                     gc.crearCliente(teclado2);
                     break;
                 case 3:
-                    System.out.println("Adiós.");
+                    gc.crearObra(teclado);
+
                     break;
+                case 4:
+                    gc.crearPedido();
+                    break;
+                case 5:
+                    System.exit(0);
                 default:
                     System.out.println("La opción elegida no existe.");
             }
-        } while (opcion != 3);
+        }
     }
 
     private static void menu() {
