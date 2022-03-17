@@ -33,8 +33,8 @@ public class Ejercicio1 extends Dado {
 
                 System.out.println("Hay empate");
             }
-            System.out.println(j1.getNombre() + " : " + j1.getFichas());
-            System.out.println(j2.getNombre() + " : " + j2.getFichas());
+            System.out.println("Marcador: " + j1.getNombre() + " " + j1.getFichas() + " - " + j2.getNombre() + " " + j2.getFichas());
+            
         } while (j1.getFichas()>0 && j2.getFichas()>0);
         if (j1.getFichas() == 0) {
             System.out.println(j2.getNombre() + "ha ganado el juego");
