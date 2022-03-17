@@ -37,9 +37,9 @@ public class Ejercicio1 extends Dado {
             
         } while (j1.getFichas()>0 && j2.getFichas()>0);
         if (j1.getFichas() == 0) {
-            System.out.println(j2.getNombre() + "ha ganado el juego");
+            System.out.println(j2.getNombre() + " ha ganado el juego");
         } else {
-            System.out.println(j1.getNombre() + "ha ganado el juego");
+            System.out.println(j1.getNombre() + " ha ganado el juego");
         }
     }
 
