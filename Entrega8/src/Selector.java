@@ -13,7 +13,7 @@ public class Selector {
                 teclado.next();
             }
             switch (eleccion) {
-                case 1: Ejercicio1.Lanzar();
+                case 1: Ejercicio1.Lanzar(teclado);
                     break;
                 case 2:
                     break;

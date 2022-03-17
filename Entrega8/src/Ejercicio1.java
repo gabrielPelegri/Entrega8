@@ -1,20 +1,43 @@
+import java.util.Scanner;
 
+public class Ejercicio1 extends Dado {
 
-public class Ejercicio1 extends Dado{
+    public static void Lanzar(Scanner teclado) {
+        Dado d1 = new Dado();
+        Dado d2 = new Dado();
+        JugadorGuerra j1 = new JugadorGuerra(d1);
+        JugadorGuerra j2 = new JugadorGuerra(d2);
+        System.out.println("¿Nombre del jugador?");
+        String nombre1 = teclado.next();
+        j1.setNombre(nombre1);
+        System.out.println("¿Nombre del jugador?");
+        String nombre2 = teclado.next();
+        j2.setNombre(nombre2);
 
-	public static void Lanzar() {
-		int suma = 0;
-		Dado d6 = new Dado();
-		Dado d10 = new Dado(10);
-		Dado d12 = new Dado(12);
-		do {
-			d6.lanzarDado();
-			d10.lanzarDado();
-			d12.lanzarDado();
-			suma = d6.getUltima() + d10.getUltima() + d12.getUltima();
-			System.out.println("La suma es: " + suma + "\n");
-		} while (suma < 20);
-		System.out.println("Acabó el juego.");
-	}
+        do {
+            d1.lanzarDado();
+            d2.lanzarDado();
+            if (d1.ultimaCara > d2.ultimaCara) {
+                j1.Victoria();
+                j2.Derrota();
+                System.out.println(j1.getNombre() + "ha sacado " + d1.getUltima());
+                System.out.println(j2.getNombre() + "ha sacado " + d2.getUltima());
+                System.out.println(j1.getNombre() + "gana");
+            } else if (d2.ultimaCara > d1.ultimaCara) {
+                j2.Victoria();
+                j1.Derrota();
+                System.out.println(j1.getNombre() + "ha sacado " + d1.getUltima());
+                System.out.println(j2.getNombre() + "ha sacado " + d2.getUltima());
+                System.out.println(j2.getNombre() + "gana");
+            }else{
+                System.out.println(j1.getNombre() + "ha sacado " + d1.getUltima());
+                System.out.println(j2.getNombre() + "ha sacado " + d2.getUltima());
+                System.out.println("Hay empate");
+            }
+          
+
+        } while (true);
+
+    }
 
 }
