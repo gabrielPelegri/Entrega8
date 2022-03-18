@@ -50,7 +50,7 @@ public class Gestor {
 
         int eleccion = 0;
         do {
-            
+
             System.out.println("¿Tipo?");
             System.out.println("1: Libro");
             System.out.println("2: Video");
@@ -97,7 +97,7 @@ public class Gestor {
     }
 
     public void crearPedido(Scanner teclado) {
-        
+
         if (!listaClientes.isEmpty()) {
 
             int eleccion = 0;

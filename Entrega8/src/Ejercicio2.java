@@ -7,7 +7,7 @@ public class Ejercicio2 extends Gestor {
         Gestor gc = new Gestor();
         Scanner teclado2 = new Scanner(System.in);
         int opcion = 0;
-        while (true) {
+        while (opcion!=7) {
 
             System.out.println("\n-- Menú --\n");
             menu();
@@ -38,9 +38,12 @@ public class Ejercicio2 extends Gestor {
                     gc.mostrarObras();
                     break;
                 case 7:
-                    System.exit(0);
+                    System.out.println("Volviendo al menu");
+                    System.out.println("Datos del ejercicio 2 reiniciados");
+                    break;
                 default:
                     System.out.println("La opción elegida no existe.");
+                    break;
             }
         }
     }
