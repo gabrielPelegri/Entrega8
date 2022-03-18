@@ -61,7 +61,7 @@ public class Gestor {
                 teclado.next();
             }
         } while (eleccion != 1 && eleccion != 2);
-        
+
         System.out.println("¿Nombre de la obra?");
         String nombre = teclado.next();
         System.out.println("¿Nombre del autor?");
@@ -89,10 +89,10 @@ public class Gestor {
                 } catch (InputMismatchException e) {
                     teclado.next();
                 }
-                
+
             }
             Obra o = new Video(autor, nombre, duracion);
-                listaObras.add(o);
+            listaObras.add(o);
         }
     }
 
@@ -124,9 +124,12 @@ public class Gestor {
                 for (Obra o : listaObras) {
                     System.out.println(o.toString());
                 }
-                System.out.println(salir + "Finalizar");
+                System.out.println(salir + ": Terminar");
                 try {
                     eleccion = teclado.nextInt();
+                    if (eleccion == salir) {
+                        break;
+                    }
                     eleccion--;
                     p.setObras(listaObras.get(eleccion));
                 } catch (InputMismatchException e) {
@@ -141,7 +144,7 @@ public class Gestor {
 
     public void mostrarPedido() {
         for (Pedido p : listaPedidos) {
-            p.toString();
+            System.out.println(p.toString());
         }
     }
 
