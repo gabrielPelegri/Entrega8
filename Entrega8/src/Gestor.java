@@ -97,7 +97,7 @@ public class Gestor {
     }
 
     public void crearPedido(Scanner teclado) {
-        System.out.println("Cantidad: " + listaObras.size());
+       
         if (!listaClientes.isEmpty()) {
 
             int eleccion = 0;

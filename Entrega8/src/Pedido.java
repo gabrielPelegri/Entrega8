@@ -17,8 +17,9 @@ public class Pedido {
 
     public String toString() {
         String s = "";
-        s += "Pedidos de " + this.cliente.getNombre() + ":\n";
+        s += "Pedidos de " + this.cliente.getNombre() + ":";
         for (Obra o : pedidos) {
+            s+="\n";
             s += o.toString();
         }
 
