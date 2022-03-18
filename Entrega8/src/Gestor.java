@@ -61,7 +61,7 @@ public class Gestor {
                 teclado.next();
             }
         } while (eleccion != 1 && eleccion != 2);
-        System.out.println("Salida del bucle");
+        
         System.out.println("¿Nombre de la obra?");
         String nombre = teclado.next();
         System.out.println("¿Nombre del autor?");
@@ -89,9 +89,10 @@ public class Gestor {
                 } catch (InputMismatchException e) {
                     teclado.next();
                 }
-                Obra o = new Video(autor, nombre, duracion);
-                listaObras.add(o);
+                
             }
+            Obra o = new Video(autor, nombre, duracion);
+                listaObras.add(o);
         }
     }
 

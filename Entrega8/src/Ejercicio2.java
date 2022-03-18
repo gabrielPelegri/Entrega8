@@ -32,9 +32,12 @@ public class Ejercicio2 extends Gestor {
                     gc.crearPedido(teclado);
                     break;
                 case 5:
-
+                    gc.mostrarPedido();
                     break;
                 case 6:
+                    gc.mostrarObras();
+                    break;
+                case 7:
                     System.exit(0);
                 default:
                     System.out.println("La opción elegida no existe.");
@@ -48,7 +51,8 @@ public class Ejercicio2 extends Gestor {
         System.out.println("3 - Crear una obra");
         System.out.println("4 - Crear un pedido");
         System.out.println("5 - Mostrar pedidos");
-        System.out.println("6 - Salir");
+        System.out.println("6 - Mostrar obras");
+        System.out.println("7 - Salir");
     }
 
 }

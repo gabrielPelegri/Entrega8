@@ -1,16 +1,18 @@
 package Obras;
 
 public class Video extends Obra {
-    private static int contador = 0;
+    
     String titulo;
     String autor;
     int duracion;
+    int ident;
 
     public Video(String autor, String titulo, int duracion) {
         contador++;
         this.autor = autor;
         this.titulo = titulo;
         this.duracion = duracion;
+        this.ident = contador;
     }
 
     @Override
@@ -26,14 +28,14 @@ public class Video extends Obra {
     public int getDuracion() {
         return this.duracion;
     }
-
-    public int getContador() {
-        return this.contador;
+@Override
+    public int getIdent() {
+        return this.ident;
     }
 
     @Override
     public String toString() {
-        String s = getContador() + ": ";
+        String s = this.ident + ": ";
         s += this.getTitulo() + " de ";
         s += this.getAutor();
         s += " (" + this.getDuracion() + " minutos)";
