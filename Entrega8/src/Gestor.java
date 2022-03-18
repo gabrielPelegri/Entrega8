@@ -7,10 +7,12 @@ public class Gestor {
 
     ArrayList<Cliente> listaClientes;
     ArrayList<Obra> listaObras;
+    ArrayList<Pedido> listaPedidos;
 
     public Gestor() {
         listaClientes = new ArrayList<Cliente>();
         listaObras = new ArrayList<Obra>();
+        listaPedidos = new ArrayList<>();
     }
 
     public void crearCliente(Scanner teclado) {
@@ -39,8 +41,8 @@ public class Gestor {
         } else {
 
         }
-        for (Cliente c : listaClientes) {
-            System.out.println(c.toString());
+        for (Obra obra : listaObras) {
+            System.out.println(obra.toString());
         }
     }
 
@@ -114,9 +116,9 @@ public class Gestor {
                     System.out.println("No válido");
                 }
             }
-            int salir=listaObras.size();
-            eleccion=salir++;
-            while (eleccion !=salir+1) {
+            int salir = listaObras.size();
+            eleccion = salir++;
+            while (eleccion != salir) {
                 System.out.println("¿Qué obra agregar al pedido?");
                 for (Obra o : listaObras) {
                     System.out.println(o.toString());
@@ -132,6 +134,13 @@ public class Gestor {
                     System.out.println("No válido");
                 }
             }
+            listaPedidos.add(p);
+        }
+    }
+
+    public void mostrarPedido() {
+        for (Pedido p : listaPedidos) {
+            p.toString();
         }
     }
 
