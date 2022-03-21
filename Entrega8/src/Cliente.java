@@ -34,7 +34,7 @@ public class Cliente {
     @Override
     public String toString() {
         String s = "";
-        s = "Cliente n.ยบ" + this.id + " [" + this.nombre + "]\n";
+        s = "Cliente n.บ" + this.id + " [" + this.nombre + "]\n";
         return s;
     }
 

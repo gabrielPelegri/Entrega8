@@ -7,10 +7,10 @@ public class Ejercicio1 extends Dado {
         Dado d2 = new Dado();
         JugadorGuerra j1 = new JugadorGuerra(d1);
         JugadorGuerra j2 = new JugadorGuerra(d2);
-        System.out.println("Â¿Nombre del jugador?");
+        System.out.println("¿Nombre del jugador?");
         String nombre1 = teclado.next();
         j1.setNombre(nombre1);
-        System.out.println("Â¿Nombre del jugador?");
+        System.out.println("¿Nombre del jugador?");
         String nombre2 = teclado.next();
         j2.setNombre(nombre2);
 
@@ -33,13 +33,13 @@ public class Ejercicio1 extends Dado {
 
                 System.out.println("Hay empate");
             }
-            System.out.println("Marcador: " + j1.getNombre() + " " + j1.getFichas() + " - " + j2.getNombre() + " " + j2.getFichas());
+            System.out.println("Marcador: " + j1.getNombre() + " " + j1.getFichas() + " - " + j2.getNombre() + " " + j2.getFichas() + "\n");
             
         } while (j1.getFichas()>0 && j2.getFichas()>0);
         if (j1.getFichas() == 0) {
-            System.out.println(j2.getNombre() + " ha ganado el juego");
+            System.out.println(j2.getNombre() + " ha ganado el juego\n");
         } else {
-            System.out.println(j1.getNombre() + " ha ganado el juego");
+            System.out.println(j1.getNombre() + " ha ganado el juego\n");
         }
     }
 

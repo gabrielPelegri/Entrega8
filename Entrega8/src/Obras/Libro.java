@@ -39,7 +39,7 @@ public class Libro extends Obra {
         String s = this.ident + ": ";
         s += this.getTitulo() + " de ";
         s += this.getAutor();
-        s += " (" + this.getPaginas() + " páginas)";
+        s += " (" + this.getPaginas() + " paginas)";
         return s;
 
     }
