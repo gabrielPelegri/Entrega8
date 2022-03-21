@@ -62,13 +62,13 @@ public class Gestor {
             }
         } while (eleccion != 1 && eleccion != 2);
 
-        System.out.println("¿Nombre de la obra?");
+        System.out.println("�Nombre de la obra?");
         String nombre = teclado.next();
-        System.out.println("¿Nombre del autor?");
+        System.out.println("�Nombre del autor?");
         String autor = teclado.next();
         if (eleccion == 1) {
             int paginas = 0;
-            System.out.println("¿Cuántas páginas tiene?");
+            System.out.println("�Cuantas paginas tiene?");
             while (true) {
                 try {
                     paginas = teclado.nextInt();
@@ -81,7 +81,7 @@ public class Gestor {
             listaObras.add(o);
         } else if (eleccion == 2) {
             int duracion = 0;
-            System.out.println("¿Duración (minutos)?");
+            System.out.println("�Duracion (minutos)?");
             while (true) {
                 try {
                     duracion = teclado.nextInt();
@@ -103,7 +103,7 @@ public class Gestor {
             int eleccion = 0;
             Pedido p;
             while (true) {
-                System.out.println("¿Para qué cliente?");
+                System.out.println("�Para que cliente?");
                 mostrarClientes();
                 try {
                     eleccion = teclado.nextInt();
@@ -120,7 +120,7 @@ public class Gestor {
             int salir = listaObras.size();
             eleccion = salir++;
             while (eleccion != salir) {
-                System.out.println("¿Qué obra agregar al pedido?");
+                System.out.println("�Que obra agregar al pedido?");
                 for (Obra o : listaObras) {
                     System.out.println(o.toString());
                 }
@@ -135,7 +135,7 @@ public class Gestor {
                 } catch (InputMismatchException e) {
                     teclado.next();
                 } catch (IndexOutOfBoundsException e) {
-                    System.out.println("No válido");
+                    System.out.println("No valido");
                 }
             }
             listaPedidos.add(p);

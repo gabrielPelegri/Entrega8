@@ -9,7 +9,7 @@ public class Ejercicio2 extends Gestor {
         int opcion = 0;
         while (opcion!=7) {
 
-            System.out.println("\n-- Menú --\n");
+            System.out.println("\n-- Menu --\n");
             menu();
             try {
                 opcion = teclado2.nextInt();
@@ -42,7 +42,7 @@ public class Ejercicio2 extends Gestor {
                     System.out.println("Datos del ejercicio 2 reiniciados");
                     break;
                 default:
-                    System.out.println("La opción elegida no existe.");
+                    System.out.println("La opcion elegida no existe.");
                     break;
             }
         }
