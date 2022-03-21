@@ -1,5 +1,5 @@
 # Entrega8
-Ejercicios realizado por: 
+Ejercicios realizados por: 
 
 Gabriel Pelegri Riis 
 
@@ -9,7 +9,7 @@ David César Moro Nieto
 
 Repositorio ubicado en: https://github.com/gabrielPelegri/Entrega8
 # Ejercicios del Tema 8 de Técnicas de Programación
-1. La guerra de dados
+## 1. La guerra de dados
 Requisitos previos: Ejercicio 1 del capítulo La programación orientada a objetos
 
 Dos jugadores se enfrentan en una guerra de dados: cada jugador tiene un dado de seis caras y diez fichas.
@@ -154,7 +154,7 @@ Marcador: Jimena 0 - Lucía 20
 
 Lucía ha ganado
 
-2. Los clientes (versión 2)
+## 2. Los clientes (versión 2)
 Requisitos previos: Ejercicio 2 del capítulo La programación orientada a objetos
 
 Los clientes creados en el capítulo anterior, pueden comprar libros y vídeos a nuestro editor. Todos los libros y vídeos tienen un título y un autor. Un libro tiene varias páginas, mientras que un vídeo tiene una duración. Crear una clase Obra, agrupando los elementos comunes a libros y vídeos y dos clases Libros y Video, herederas de esta, con los elementos específicos para cada una. Luego cree una clase Pedido, asociando a un cliente un conjunto de obras compradas.
