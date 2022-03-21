@@ -1,6 +1,14 @@
 # Entrega8
-Ejercicios del Tema 8 de Técnicas de Programación
-Ejercicios
+Ejercicios realizado por: 
+
+Gabriel Pelegri Riis 
+
+Victor Navarro Carrillo
+
+David César Moro Nieto 
+
+Repositorio ubicado en: https://github.com/gabrielPelegri/Entrega8
+# Ejercicios del Tema 8 de Técnicas de Programación
 1. La guerra de dados
 Requisitos previos: Ejercicio 1 del capítulo La programación orientada a objetos
 
