@@ -16,12 +16,12 @@ public class Gestor {
     }
 
     public void crearCliente(Scanner teclado) {
-        System.out.println("Â¿Nombre?");
+        System.out.println("¿Nombre?");
         String nombre = teclado.next();
         Cliente c = new Cliente(nombre);
         listaClientes.add(c);
 
-        System.out.println("Cliente n.Âº" + c.id + " [" + c.getNombre() + "] aÃ±adido");
+        System.out.println("Cliente n.º" + c.id + " [" + c.getNombre() + "] añadido");
     }
 
     public void mostrarClientes() {
@@ -51,7 +51,7 @@ public class Gestor {
         int eleccion = 0;
         do {
 
-            System.out.println("Â¿Tipo?");
+            System.out.println("¿Tipo?");
             System.out.println("1: Libro");
             System.out.println("2: Video");
             try {
